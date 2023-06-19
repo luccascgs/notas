@@ -20,6 +20,47 @@ git config --global user.name "'nome'"``
 ``bash
 git config --global user.email "'email'" ``
 
-## Crie a pasta main ##
+## Crie a pasta ##
 
 mkdir "nome da pasta"
+
+# Configurando o GitHub #
+
+Verificar se existe chave
+
+``bash
+ssh.ls -al ~/.ssh
+``
+## Adicionar uma nova chave ##
+
+``bash
+(ID)ssh-keygen -t ed25519 -C "your_email@example.com"
+``
+
+## Inicializar agente-ssh ##
+
+``bash
+eval "$(ssh-agent -s)"
+``
+
+## Copiar chave ssh.##
+
+``bash
+clip < ~/.ssh/id_ed25519.pub
+``
+
+## Adicionar Chave ##
+
+Github -> Settings -> SSH and GPG keys -> New SSH key -> Colar
+
+## Testar Conexão ##
+
+``bash
+ssh -T git@github.comyes
+``
+
+## Adicionar chave ssh ao agente ##
+
+``bash
+ssh-add ~/.ssh/id_ed25519
+``
