@@ -2,23 +2,27 @@
 
 ## Primeiro confira se o git está instalado ##
 
-``bash
-git --version``
+```bash
+git --version
+```
 
 ## Entre na pasta documentos ##
 
-``bash
-cd Documents/``
+```bash
+cd Documents/
+```
 
 ## Configure o nome de usuário ##
 
-``bash
-git config --global user.name "'nome'"``
+```bash
+git config --global user.name "'nome'"
+```
 
 ## Configure o e-mail ##
 
-``bash
-git config --global user.email "'email'" ``
+```bash
+git config --global user.email "'email'" 
+```
 
 ## Crie a pasta ##
 
@@ -28,26 +32,26 @@ mkdir "nome da pasta"
 
 Verificar se existe chave
 
-``bash
+```bash
 ssh.ls -al ~/.ssh
-``
+```
 ## Adicionar uma nova chave ##
 
-``bash
-(ID)ssh-keygen -t ed25519 -C "your_email@example.com"
-``
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
 
 ## Inicializar agente-ssh ##
 
-``bash
+```bash
 eval "$(ssh-agent -s)"
-``
+```
 
 ## Copiar chave ssh.##
 
-``bash
+```bash
 clip < ~/.ssh/id_ed25519.pub
-``
+```
 
 ## Adicionar Chave ##
 
@@ -55,9 +59,9 @@ Github -> Settings -> SSH and GPG keys -> New SSH key -> Colar
 
 ## Testar Conexão ##
 
-``bash
+```bash
 ssh -T git@github.comyes
-``
+```
 
 ## Adicionar chave ssh ao agente ##
 
